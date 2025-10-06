@@ -1,0 +1,68 @@
+Số lớp: 3 -> ['extrinsic', 'intrinsic', 'no']
+[Epoch 01] loss=0.6881 | val_acc=0.8629
+[Epoch 02] loss=0.4325 | val_acc=0.8600
+[Epoch 03] loss=0.4269 | val_acc=0.8586
+[Epoch 04] loss=0.4007 | val_acc=0.8600
+[Epoch 05] loss=0.3965 | val_acc=0.8600
+[Epoch 06] loss=0.3901 | val_acc=0.8600
+[Epoch 07] loss=0.3887 | val_acc=0.8600
+[Epoch 08] loss=0.3766 | val_acc=0.8571
+[Epoch 09] loss=0.3815 | val_acc=0.8600
+[Epoch 10] loss=0.3835 | val_acc=0.8586
+[Epoch 11] loss=0.3747 | val_acc=0.8586
+[Epoch 12] loss=0.3828 | val_acc=0.8586
+[Epoch 13] loss=0.3633 | val_acc=0.8557
+[Epoch 14] loss=0.3692 | val_acc=0.8586
+[Epoch 15] loss=0.3727 | val_acc=0.8600
+[Epoch 16] loss=0.3705 | val_acc=0.8586
+[Epoch 17] loss=0.3663 | val_acc=0.8586
+[Epoch 18] loss=0.3625 | val_acc=0.8557
+[Epoch 19] loss=0.3547 | val_acc=0.8543
+[Epoch 20] loss=0.3669 | val_acc=0.8557
+[Epoch 21] loss=0.3731 | val_acc=0.8543
+[Epoch 22] loss=0.3611 | val_acc=0.8571
+[Epoch 23] loss=0.3611 | val_acc=0.8557
+[Epoch 24] loss=0.3648 | val_acc=0.8571
+[Epoch 25] loss=0.3609 | val_acc=0.8543
+[Epoch 26] loss=0.3665 | val_acc=0.8557
+[Epoch 27] loss=0.3577 | val_acc=0.8571
+[Epoch 28] loss=0.3605 | val_acc=0.8571
+[Epoch 29] loss=0.3561 | val_acc=0.8571
+[Epoch 30] loss=0.3572 | val_acc=0.8557
+[Epoch 31] loss=0.3554 | val_acc=0.8543
+[Epoch 32] loss=0.3492 | val_acc=0.8557
+[Epoch 33] loss=0.3704 | val_acc=0.8571
+[Epoch 34] loss=0.3611 | val_acc=0.8557
+[Epoch 35] loss=0.3610 | val_acc=0.8571
+[Epoch 36] loss=0.3627 | val_acc=0.8557
+[Epoch 37] loss=0.3586 | val_acc=0.8571
+[Epoch 38] loss=0.3569 | val_acc=0.8529
+[Epoch 39] loss=0.3675 | val_acc=0.8557
+[Epoch 40] loss=0.3537 | val_acc=0.8543
+[Epoch 41] loss=0.3572 | val_acc=0.8586
+[Epoch 42] loss=0.3505 | val_acc=0.8586
+[Epoch 43] loss=0.3627 | val_acc=0.8586
+[Epoch 44] loss=0.3612 | val_acc=0.8586
+[Epoch 45] loss=0.3557 | val_acc=0.8571
+[Epoch 46] loss=0.3548 | val_acc=0.8557
+[Epoch 47] loss=0.3499 | val_acc=0.8571
+[Epoch 48] loss=0.3594 | val_acc=0.8529
+[Epoch 49] loss=0.3501 | val_acc=0.8571
+[Epoch 50] loss=0.3534 | val_acc=0.8571
+Độ chính xác (Accuracy) của EnsembleNN: 0.8629
+
+Báo cáo phân loại (Classification Report):
+              precision    recall  f1-score   support
+
+   extrinsic     0.8246    0.8430    0.8337       223
+   intrinsic     0.8973    0.8072    0.8499       249
+          no     0.8669    0.9430    0.9034       228
+
+    accuracy                         0.8629       700
+   macro avg     0.8629    0.8644    0.8623       700
+weighted avg     0.8642    0.8629    0.8622       700
+
+--- Bắt đầu dự đoán trên tập dữ liệu test với 2000 mẫu ---
+✅ Dự đoán dạng số hoàn tất.
+✅ Chuyển đổi nhãn sang dạng chữ hoàn tất.
+✅ Đã lưu file submission vào: 'data/submission_ensemble_nn.csv'
