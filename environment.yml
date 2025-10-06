@@ -1,0 +1,37 @@
+name: dsc
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pip
+  - ipython
+  - jupyter
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=12.4  # nếu cần GPU
+  - pip:
+      - accelerate
+      - bitsandbytes
+      - datasets
+      - diffusers
+      - evaluate
+      - fastapi
+      - huggingface-hub
+      - peft
+      - sentencepiece
+      - tokenizers
+      - torch
+      - torchvision
+      - torchaudio
+      - tqdm
+      - transformers
+      - triton
+      - trl
+      - unsloth
+      - wandb
