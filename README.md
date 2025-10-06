@@ -7,6 +7,21 @@ chmod +x all_in_one.sh
 ```
 ➡️ **Output:** `submit.csv` - File submission cuối cùng
 
+## 📦 Model Checkpoints
+
+**🔗 Download Link:** [Google Drive - Model Checkpoints](https://drive.google.com/drive/folders/1uXaU4NIpOKnXL6Io-zeKhBaggXvcGjZX?usp=sharing)
+
+**Yêu cầu:** Tải xuống và giải nén các model checkpoints vào thư mục `checkpoint/` trước khi chạy script.
+
+**Cấu trúc checkpoint cần thiết:**
+```
+checkpoint/
+├── Qwen3-4B-Base/          # Qwen3-4B fine-tuned model
+├── Qwen2.5-7B-Instruct/    # Qwen2.5-7B fine-tuned model  
+├── Qwen2.5-7B/             # Qwen2.5-7B base model
+└── ...                     # Các models khác
+```
+
 ---
 
 Thư mục `src` chứa solution hoàn chỉnh cho cuộc thi DSC 2025. Ban tổ chức chỉ cần chạy script `all_in_one.sh` để tự động tạo ra file submission.
@@ -263,17 +278,20 @@ class EnsembleNN(nn.Module):
 ## 🏆 Submission Instructions
 
 **Cho Ban Tổ Chức:**
-1. Đảm bảo có môi trường Python với dependencies (xem `environment.yml`)
-2. Đảm bảo có GPU để inference (khuyến nghị)
-3. Chạy lệnh: `./all_in_one.sh`
-4. Lấy file `submit.csv` làm kết quả cuối cùng
+1. **Tải model checkpoints** từ [Google Drive](https://drive.google.com/drive/folders/1uXaU4NIpOKnXL6Io-zeKhBaggXvcGjZX?usp=sharing)
+2. Giải nén và đặt vào thư mục `checkpoint/`
+3. Đảm bảo có môi trường Python với dependencies (xem `environment.yml`)
+4. Đảm bảo có GPU để inference (khuyến nghị)
+5. Chạy lệnh: `./all_in_one.sh`
+6. Lấy file `submit.csv` làm kết quả cuối cùng
 
 **Thời gian chạy dự kiến:** 15-30 phút (tùy thuộc GPU)
 
 **Requirements:**
-- CUDA-capable GPU
-- RAM: 24GB+ 
-- Storage: 10GB+ cho models và data
+- CUDA-capable GPU (khuyến nghị)
+- RAM: 16GB+ 
+- Storage: 15GB+ cho models và data
+- Internet để tải checkpoints
 
 ---
 
