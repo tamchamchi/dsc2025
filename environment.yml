@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.13
+  - python=3.10
   - pip
   - ipython
   - jupyter
@@ -14,7 +14,7 @@ dependencies:
   - pytorch
   - torchvision
   - torchaudio
-  - cudatoolkit=12.4  # nếu cần GPU
+  # - cudatoolkit=12.4  # nếu cần GPU
   - pip:
       - accelerate
       - bitsandbytes

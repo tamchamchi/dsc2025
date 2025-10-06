@@ -36,7 +36,6 @@ def init_model(model_name, checkpoint):
     model_name = f"unsloth/{model_name}",
     load_in_4bit = load_in_4bit,
     max_seq_length = max_seq_length,
-    cache_dir="/mnt/mmlab2024nas/anhndt"
     )
 
     number_token_ids = []
@@ -120,13 +119,14 @@ def predict(model, tokenizer, number_token_ids, task):
     values = ["01", "02", "12"]
 
     diff['task'] = pd.Series(pd.NA, index=diff.index) 
+    diff.loc[conditions[0], 'task'] = values[0]
     diff.loc[conditions[1], 'task'] = values[1]
     diff.loc[conditions[2], 'task'] = values[2]
 
     diff = diff[diff["task"]==task]
-
+    
     private_df = pd.read_csv("./data/vihallu-private-test.csv")
-    task = private_df[private_df['id'].isin(diff["id"])]
+    task_df = private_df[private_df['id'].isin(diff["id"])]
 
     output_file_path = f'./data/submit_{task}.csv'
 
@@ -152,8 +152,8 @@ def predict(model, tokenizer, number_token_ids, task):
     model.eval()
 
     with torch.inference_mode():
-        for i in tqdm(range(0, len(task), batch_size), desc="Đang dự đoán trên file test"):
-            batch_df = task.iloc[i:i+batch_size]
+        for i in tqdm(range(0, len(task_df), batch_size), desc="Đang dự đoán trên file test"):
+            batch_df = task_df.iloc[i:i+batch_size]
             
             # Lấy ID của các hàng trong batch
             batch_ids = batch_df['id'].tolist()
