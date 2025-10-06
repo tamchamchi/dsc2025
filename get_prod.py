@@ -33,10 +33,10 @@ id_to_label = {v: k for k, v in label_to_id.items()}
 def init_model(model_name, checkpoint):
 
     model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = f"unsloth/{model_name}",
-    load_in_4bit = load_in_4bit,
-    max_seq_length = max_seq_length,
-    cache_dir="/mnt/mmlab2024nas/anhndt"
+        model_name = f"unsloth/{model_name}",
+        load_in_4bit = load_in_4bit,
+        max_seq_length = max_seq_length,
+        gpu_memory_utilization = 0.9
     )
 
     number_token_ids = []
